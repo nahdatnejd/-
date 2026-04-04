@@ -216,32 +216,56 @@
             align-items: center;
             gap: 12px;
             text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .logo:hover {
+            transform: translateY(-2px);
         }
         
         .logo-icon {
-            width: 72px;
-            height: 72px;
+            width: 100px;
+            height: 100px;
             object-fit: contain;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(26, 86, 50, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(26, 86, 50, 0.25), 0 2px 8px rgba(26, 86, 50, 0.15);
+            transition: var(--transition);
+            border: 2px solid rgba(201, 168, 76, 0.15);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            padding: 4px;
+            flex-shrink: 0;
+        }
+        
+        .logo:hover .logo-icon {
+            box-shadow: 0 12px 32px rgba(26, 86, 50, 0.35), 0 4px 12px rgba(201, 168, 76, 0.2);
+            border-color: rgba(201, 168, 76, 0.3);
+            transform: scale(1.08);
         }
         
         .logo-text {
             display: flex;
             flex-direction: column;
+            transition: var(--transition);
         }
         
         .logo-text h1 {
-            font-size: 1rem;
+            font-size: 1.15rem;
             font-weight: 800;
             color: var(--primary-dark);
             line-height: 1.3;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .logo-text span {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             color: var(--gray);
             font-weight: 500;
+            letter-spacing: 0.3px;
         }
         
         .nav-links {
@@ -1487,6 +1511,20 @@
             .top-bar {
                 display: none;
             }
+            .logo {
+                gap: 8px;
+            }
+            .logo-icon {
+                width: 70px;
+                height: 70px;
+                border-radius: 12px;
+            }
+            .logo-text h1 {
+                font-size: 1rem;
+            }
+            .logo-text span {
+                font-size: 0.75rem;
+            }
             .mobile-toggle {
                 display: flex;
                 position: relative;
@@ -1665,7 +1703,7 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="home.html" class="logo">
-                <img src="logo.jpeg" alt="شعار نهضة نجد الحديثة" class="logo-icon">
+                <img src="logo1.png" alt="شعار نهضة نجد الحديثة" class="logo-icon">
                 <div class="logo-text">
                     <h1>نهضة نجد الحديثة</h1>
                     <span>للمقاولات والخدمات العامة</span>
