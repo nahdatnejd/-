@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>خدماتنا - شركة نهضة نجد الحديثة</title>
+    <link rel="icon" type="image/png" href="logo1.png">
+    <link rel="shortcut icon" type="image/png" href="logo1.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
          :root {
@@ -377,14 +379,30 @@
             justify-content: center;
         }
         
+        .service-detail-visual .sd-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+        
         .service-detail-visual .sd-icon {
             font-size: 5rem;
             opacity: 0.9;
             transition: var(--transition);
+            position: relative;
+            z-index: 3;
         }
         
         .service-detail:hover .service-detail-visual .sd-icon {
             transform: scale(1.1) rotate(-5deg);
+        }
+        
+        .service-detail:hover .service-detail-visual .sd-image {
+            transform: scale(1.06);
         }
         
         .service-detail-visual .sd-pattern {
@@ -394,6 +412,7 @@
             width: 100%;
             height: 100%;
             background: radial-gradient(circle at 30% 70%, rgba(201, 168, 76, 0.15), transparent 50%);
+            z-index: 2;
         }
         
         .service-detail-visual .sd-number {
@@ -410,6 +429,7 @@
             justify-content: center;
             font-weight: 900;
             font-size: 1.2rem;
+            z-index: 4;
         }
         
         .service-detail-content h3 {
@@ -1054,8 +1074,8 @@
             <!-- Service 1 -->
             <div class="service-detail fade-up">
                 <div class="service-detail-visual" style="background: linear-gradient(135deg, #1a5632, #0e3d22);">
+                    <img src="General%20contracting.png" alt="المقاولات العامة" class="sd-image">
                     <div class="sd-pattern"></div>
-                    <div class="sd-icon">🏢</div>
                     <div class="sd-number">01</div>
                 </div>
                 <div class="service-detail-content">
@@ -1075,8 +1095,8 @@
             <!-- Service 2 -->
             <div class="service-detail fade-up">
                 <div class="service-detail-visual" style="background: linear-gradient(135deg, #2d8659, #1a5632);">
+                    <img src="Property%20Rental%20and%20Management.png" alt="استئجار وإدارة العقارات" class="sd-image">
                     <div class="sd-pattern"></div>
-                    <div class="sd-icon">🏢</div>
                     <div class="sd-number">02</div>
                 </div>
                 <div class="service-detail-content">
@@ -1096,8 +1116,8 @@
             <!-- Service 3 -->
             <div class="service-detail fade-up">
                 <div class="service-detail-visual" style="background: linear-gradient(135deg, #c9a84c, #8a7330);">
+                    <img src="website.png" alt="إنشاء وتطوير المواقع الإلكترونية" class="sd-image">
                     <div class="sd-pattern"></div>
-                    <div class="sd-icon">🖥️</div>
                     <div class="sd-number">03</div>
                 </div>
                 <div class="service-detail-content">
@@ -1119,7 +1139,7 @@
     <section class="section process-section">
         <div class="container">
             <div class="section-header fade-up">
-                <div class="section-badge">🔄 آلية العمل</div>
+                <div class="section-badge"> آلية العمل</div>
                 <h2>كيف <span>نعمل</span></h2>
                 <p>نتبع منهجية عمل احترافية لضمان نجاح كل مشروع</p>
                 <div class="section-line"></div>
