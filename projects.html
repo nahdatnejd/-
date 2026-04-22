@@ -358,7 +358,8 @@
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 36px;
+            margin-bottom: 50px;
         }
         
         .project-card {
@@ -1045,424 +1046,287 @@
 
             <div class="filter-bar fade-up">
                 <button class="filter-btn active" onclick="filterProjects('all')">الكل</button>
-                <!--     <button class="filter-btn" onclick="filterProjects('commercial')">تجاري</button>
-                <button class="filter-btn" onclick="filterProjects('residential')">سكني</button>
+                <button class="filter-btn" onclick="filterProjects('commercial')">تيكنلوجي</button>
+                <button class="filter-btn" onclick="filterProjects('residential')">عقاري</button>
                 <button class="filter-btn" onclick="filterProjects('infrastructure')">بنية تحتية</button>
-                <button class="filter-btn" onclick="filterProjects('industrial')">صناعي</button>
-                <button class="filter-btn" onclick="filterProjects('government')">حكومي</button> -->
+                <!--  <button class="filter-btn" onclick="filterProjects('industrial')">صناعي</button>
+                <button class="filter-btn" onclick="filterProjects('government')">حكومي</button> !-->
 
             </div>
-            <!-- 
+
             <div class="projects-grid" id="projectsGrid">
-                
+
                 <div class="project-card fade-up" data-category="commercial" onclick="openModal(0)" style="transition-delay:0.1s">
-                    <div class="project-bg" style="background: linear-gradient(135deg, #1a5632, #0e3d22);"></div>
+                    <div class="project-bg" style="background: linear-gradient(rgba(26, 86, 50, 0.35), rgba(14, 61, 34, 0.35)), url('سين%20ستور%20.png') center/cover no-repeat;"></div>
                     <div class="project-zoom-icon">+</div>
                     <div class="project-overlay">
-                        <span class="project-category">تجاري</span>
-                        <h3>مجمع الواحة التجاري</h3>
-                        <p>مكة المكرمة</p>
+                        <span class="project-category">تيكنلوجي</span>
+                        <h3>متجر سين ستور</h3>
+                        <p>المملكة العربية السعودية</p>
                     </div>
                 </div>
-                
+
                 <div class="project-card fade-up" data-category="residential" onclick="openModal(1)" style="transition-delay:0.2s">
-                    <div class="project-bg" style="background: linear-gradient(135deg, #2d8659, #1a5632);"></div>
+                    <div class="project-bg" style="background: linear-gradient(rgba(45, 134, 89, 0.35), rgba(26, 86, 50, 0.35)), url('عمارة%20الكعكية.jpeg') center/cover no-repeat;"></div>
                     <div class="project-zoom-icon">+</div>
                     <div class="project-overlay">
-                        <span class="project-category">سكني</span>
-                        <h3>مجمع النخيل السكني</h3>
+                        <span class="project-category">عقاري</span>
+                        <h3>عمارة سكنية للإيجار السنوي </h3>
+                        <p>مكة المكرمة الكعكية</p>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up" data-category="residential" onclick="openModal(2)" style="transition-delay:0.3s">
+                    <div class="project-bg" style="background: linear-gradient(rgba(26, 86, 50, 0.3), rgba(201, 168, 76, 0.35)), url('فندق%20الغزة.jpeg') center/cover no-repeat;"></div>
+                    <div class="project-zoom-icon">+</div>
+                    <div class="project-overlay">
+                        <span class="project-category">عقاري</span>
+                        <h3>فندق الغزة</h3>
                         <p>مكة المكرمة</p>
                     </div>
                 </div>
-                
-                <div class="project-card fade-up" data-category="infrastructure" onclick="openModal(2)" style="transition-delay:0.3s">
-                    <div class="project-bg" style="background: linear-gradient(135deg, #c9a84c, #8a7330);"></div>
+
+                <div class="project-card fade-up" data-category="residential" onclick="openModal(3)" style="transition-delay:0.35s">
+                    <div class="project-bg" style="background: linear-gradient(rgba(45, 134, 89, 0.3), rgba(26, 86, 50, 0.35)), url('عمارة%20ريع%20ذاخر.jpeg') center/cover no-repeat;"></div>
+                    <div class="project-zoom-icon">+</div>
+                    <div class="project-overlay">
+                        <span class="project-category">عقاري</span>
+                        <h3>عمارة ريع ذاخر</h3>
+                        <p>مكة المكرمة</p>
+                    </div>
+                </div>
+
+                <div class="project-card fade-up" data-category="infrastructure" onclick="openModal(4)" style="transition-delay:0.4s">
+                    <div class="project-bg" style="background: linear-gradient(rgba(201, 168, 76, 0.35), rgba(138, 115, 48, 0.35)), url('مجاري%20السيول%20في%20الطائف%20.png') center/cover no-repeat;"></div>
                     <div class="project-zoom-icon">+</div>
                     <div class="project-overlay">
                         <span class="project-category">بنية تحتية</span>
-                        <h3>مشروع تطوير الطرق الدائرية</h3>
-                        <p>مكة المكرمة</p>
-                    </div>
-                </div>
-                <div class="project-card fade-up" data-category="government" onclick="openModal(3)" style="transition-delay:0.1s">
-                    <div class="project-bg" style="background: linear-gradient(135deg, #1a1a2e, #2d2d44);"></div>
-                    <div class="project-zoom-icon">+</div>
-                    <div class="project-overlay">
-                        <span class="project-category">حكومي</span>
-                        <h3>مبنى الخدمات الحكومية</h3>
-                        <p>جدة</p>
-                    </div>
-                </div>
-                <div class="project-card fade-up" data-category="industrial" onclick="openModal(4)" style="transition-delay:0.2s">
-                    <div class="project-bg" style="background: linear-gradient(135deg, #0e3d22, #2d8659);"></div>
-                    <div class="project-zoom-icon">+</div>
-                    <div class="project-overlay">
-                        <span class="project-category">صناعي</span>
-                        <h3>مصنع الخرسانة الجاهزة</h3>
-                        <p>الرياض</p>
-                    </div>
-                </div>
-                <div class="project-card fade-up" data-category="commercial" onclick="openModal(5)" style="transition-delay:0.3s">
-                    <div class="project-bg" style="background: linear-gradient(135deg, #c9a84c, #1a5632);"></div>
-                    <div class="project-zoom-icon">+</div>
-                    <div class="project-overlay">
-                        <span class="project-category">تجاري</span>
-                        <h3>برج المكاتب الإداري</h3>
-                        <p>مكة المكرمة</p>
-                    </div>
-                </div>
-                <div class="project-card fade-up" data-category="residential" onclick="openModal(6)" style="transition-delay:0.1s">
-                    <div class="project-bg" style="background: linear-gradient(135deg, #2d2d44, #1a5632);"></div>
-                    <div class="project-zoom-icon">+</div>
-                    <div class="project-overlay">
-                        <span class="project-category">سكني</span>
-                        <h3>فلل الريان الفاخرة</h3>
-                        <p>مكة المكرمة</p>
-                    </div>
-                </div>
-                <div class="project-card fade-up" data-category="infrastructure" onclick="openModal(7)" style="transition-delay:0.2s">
-                    <div class="project-bg" style="background: linear-gradient(135deg, #1a5632, #c9a84c);"></div>
-                    <div class="project-zoom-icon">+</div>
-                    <div class="project-overlay">
-                        <span class="project-category">بنية تحتية</span>
-                        <h3>شبكة الصرف الصحي</h3>
+                        <h3>شبكة مجاري السيول</h3>
                         <p>الطائف</p>
                     </div>
                 </div>
-                <div class="project-card fade-up" data-category="government" onclick="openModal(8)" style="transition-delay:0.3s">
-                    <div class="project-bg" style="background: linear-gradient(135deg, #0e3d22, #1a1a2e);"></div>
+
+                <div class="project-card fade-up" data-category="infrastructure" onclick="openModal(5)" style="transition-delay:0.5s">
+                    <div class="project-bg" style="background: linear-gradient(rgba(26, 86, 50, 0.35), rgba(201, 168, 76, 0.35)), url('شبكة%20مجاري%20سيول%20بيشة%20.png') center/cover no-repeat;"></div>
                     <div class="project-zoom-icon">+</div>
                     <div class="project-overlay">
-                        <span class="project-category">حكومي</span>
-                        <h3>مدرسة النور النموذجية</h3>
-                        <p>مكة المكرمة</p>
+                        <span class="project-category">بنية تحتية</span>
+                        <h3>شبكة مجاري السيول </h3>
+                        <p>بيشة</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+                <div class="modal" onclick="event.stopPropagation()">
+                    <div class="modal-header" id="modalHeader">
+                        <button class="modal-close" onclick="closeModalDirect()">✕</button>
+                        <div class="modal-icon" id="modalIcon"></div>
+                    </div>
+                    <div class="modal-body">
+                        <span class="modal-category" id="modalCategory"></span>
+                        <h3 id="modalTitle"></h3>
+                        <p id="modalDesc"></p>
+                        <div class="modal-details" id="modalDetails"></div>
                     </div>
                 </div>
             </div>
-        </div> -->
-    </section>
 
-    <!-- Modal -->
-    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-        <div class="modal" onclick="event.stopPropagation()">
-            <div class="modal-header" id="modalHeader">
-                <button class="modal-close" onclick="closeModalDirect()">✕</button>
-                <div class="modal-icon" id="modalIcon"></div>
-            </div>
-            <div class="modal-body">
-                <span class="modal-category" id="modalCategory"></span>
-                <h3 id="modalTitle"></h3>
-                <p id="modalDesc"></p>
-                <div class="modal-details" id="modalDetails"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content fade-up">
-                <h2>هل لديك مشروع تريد تنفيذه؟</h2>
-                <p>فريقنا المتخصص جاهز لتحويل رؤيتك إلى واقع ملموس</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn-primary">ابدأ مشروعك الآن ←</a>
-                    <a href="services.html" class="btn-secondary">استكشف خدماتنا</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <h3>نهضة نجد <span>الحديثة</span></h3>
-                    <p>شركة سعودية رائدة في مجال المقاولات والخدمات العامة، مقرها مكة المكرمة.</p>
-                    <div class="footer-social">
-                        <a href="#">𝕏</a><a href="#">in</a><a href="#">📷</a><a href="#">💬</a>
+            <!-- CTA -->
+            <section class="cta-section">
+                <div class="container">
+                    <div class="cta-content fade-up">
+                        <h2>هل لديك مشروع تريد تنفيذه؟</h2>
+                        <p>فريقنا المتخصص جاهز لتحويل رؤيتك إلى واقع ملموس</p>
+                        <div class="cta-buttons">
+                            <a href="contact.html" class="btn-primary">ابدأ مشروعك الآن ←</a>
+                            <a href="services.html" class="btn-secondary">استكشف خدماتنا</a>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-links">
-                    <h4>روابط سريعة</h4>
-                    <ul>
-                        <li><a href="home.html">الرئيسية</a></li>
-                        <li><a href="services.html">خدماتنا</a></li>
-                        <li><a href="projects.html">مشاريعنا</a></li>
-                        <li><a href="contact.html">تواصل معنا</a></li>
-                    </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-grid">
+                        <div class="footer-about">
+                            <h3>نهضة نجد <span>الحديثة</span></h3>
+                            <p>شركة سعودية رائدة في مجال المقاولات والخدمات العامة، مقرها مكة المكرمة.</p>
+                            <div class="footer-social">
+                                <a href="#">𝕏</a><a href="#">in</a><a href="#">📷</a><a href="#">💬</a>
+                            </div>
+                        </div>
+                        <div class="footer-links">
+                            <h4>روابط سريعة</h4>
+                            <ul>
+                                <li><a href="home.html">الرئيسية</a></li>
+                                <li><a href="services.html">خدماتنا</a></li>
+                                <li><a href="projects.html">مشاريعنا</a></li>
+                                <li><a href="contact.html">تواصل معنا</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links">
+                            <h4>خدماتنا</h4>
+                            <ul>
+                                <li><a href="services.html">المقاولات العامة</a></li>
+                                <li><a href="services.html">استئجار وإدارة العقارات</a></li>
+                                <li><a href="services.html">تطوير المواقع الإلكترونية</a></li>
+                                <li><a href="services.html">إدارة العقارات</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-links">
+                            <h4>تواصل معنا</h4>
+                            <div class="footer-contact-item"><span class="fc-icon">📍</span><span>مكة المكرمة، المملكة العربية السعودية</span></div>
+                            <div class="footer-contact-item"><span class="fc-icon">📞</span><span>+966 504588332</span></div>
+                            <div class="footer-contact-item"><span class="fc-icon">✉️</span><span>nahdat.nejd@gmail.com</span></div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <span>© 2026 شركة نهضة نجد الحديثة للمقاولات والخدمات العامة. جميع الحقوق محفوظة.</span>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h4>خدماتنا</h4>
-                    <ul>
-                        <li><a href="services.html">المقاولات العامة</a></li>
-                        <li><a href="services.html">استئجار وإدارة العقارات</a></li>
-                        <li><a href="services.html">تطوير المواقع الإلكترونية</a></li>
-                        <li><a href="services.html">إدارة العقارات</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>تواصل معنا</h4>
-                    <div class="footer-contact-item"><span class="fc-icon">📍</span><span>مكة المكرمة، المملكة العربية السعودية</span></div>
-                    <div class="footer-contact-item"><span class="fc-icon">📞</span><span>+966 504588332</span></div>
-                    <div class="footer-contact-item"><span class="fc-icon">✉️</span><span>nahdat.nejd@gmail.com</span></div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2026 شركة نهضة نجد الحديثة للمقاولات والخدمات العامة. جميع الحقوق محفوظة.</span>
-            </div>
-        </div>
-    </footer>
+            </footer>
 
-    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">▲</button>
+            <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">▲</button>
 
-    <script>
-        // Project data
-        const projects = [{
-            title: 'مجمع الواحة التجاري',
-            category: 'تجاري',
-            icon: '🏢',
-            bg: 'linear-gradient(135deg, #1a5632, #0e3d22)',
-            desc: 'تنفيذ مجمع تجاري متعدد الاستخدامات يضم محلات تجارية ومكاتب إدارية ومطاعم على مساحة 15,000 متر مربع. تم تنفيذ المشروع وفق أعلى المعايير المعمارية والإنشائية الحديثة مع مراعاة أنظمة السلامة والأمان.',
-            details: [{
-                icon: '📍',
-                label: 'الموقع',
-                value: 'مكة المكرمة'
-            }, {
-                icon: '📏',
-                label: 'المساحة',
-                value: '15,000 م²'
-            }, {
-                icon: '📅',
-                label: 'سنة الإنجاز',
-                value: '2024'
-            }, {
-                icon: '⏱️',
-                label: 'مدة التنفيذ',
-                value: '18 شهر'
-            }]
-        }, {
-            title: 'مجمع النخيل السكني',
-            category: 'سكني',
-            icon: '🏠',
-            bg: 'linear-gradient(135deg, #2d8659, #1a5632)',
-            desc: 'بناء مجمع سكني فاخر يضم 48 وحدة سكنية بتصاميم عصرية ومرافق متكاملة تشمل حدائق وملاعب وصالة رياضية. يتميز المشروع بجودة التشطيبات واستخدام أحدث تقنيات البناء المستدام.',
-            details: [{
-                icon: '📍',
-                label: 'الموقع',
-                value: 'مكة المكرمة'
-            }, {
-                icon: '🏠',
-                label: 'الوحدات',
-                value: '48 وحدة'
-            }, {
-                icon: '📅',
-                label: 'سنة الإنجاز',
-                value: '2023'
-            }, {
-                icon: '⏱️',
-                label: 'مدة التنفيذ',
-                value: '24 شهر'
-            }]
-        }, {
-            title: 'مشروع تطوير الطرق الدائرية',
-            category: 'بنية تحتية',
-            icon: '🛣️',
-            bg: 'linear-gradient(135deg, #c9a84c, #8a7330)',
-            desc: 'تنفيذ مشروع تطوير وتوسعة الطرق الدائرية بطول 12 كيلومتر شاملاً أعمال السفلتة والإنارة والأرصفة وتصريف مياه الأمطار ولوحات الإرشاد المرورية.',
-            details: [{
-                icon: '📍',
-                label: 'الموقع',
-                value: 'مكة المكرمة'
-            }, {
-                icon: '📏',
-                label: 'الطول',
-                value: '12 كم'
-            }, {
-                icon: '📅',
-                label: 'سنة الإنجاز',
-                value: '2024'
-            }, {
-                icon: '⏱️',
-                label: 'مدة التنفيذ',
-                value: '14 شهر'
-            }]
-        }, {
-            title: 'مبنى الخدمات الحكومية',
-            category: 'حكومي',
-            icon: '🏛️',
-            bg: 'linear-gradient(135deg, #1a1a2e, #2d2d44)',
-            desc: 'تنفيذ مبنى حكومي خدمي بمساحة 8,000 متر مربع يضم قاعات اجتماعات ومكاتب إدارية ومواقف سيارات. تم تنفيذ المشروع وفق اشتراطات الجهات الحكومية ومعايير الاستدامة.',
-            details: [{
-                icon: '📍',
-                label: 'الموقع',
-                value: 'جدة'
-            }, {
-                icon: '📏',
-                label: 'المساحة',
-                value: '8,000 م²'
-            }, {
-                icon: '📅',
-                label: 'سنة الإنجاز',
-                value: '2023'
-            }, {
-                icon: '⏱️',
-                label: 'مدة التنفيذ',
-                value: '20 شهر'
-            }]
-        }, {
-            title: 'مصنع الخرسانة الجاهزة',
-            category: 'صناعي',
-            icon: '🏭',
-            bg: 'linear-gradient(135deg, #0e3d22, #2d8659)',
-            desc: 'إنشاء مصنع متكامل للخرسانة الجاهزة بطاقة إنتاجية عالية يشمل خطوط الإنتاج والمختبرات ومرافق التخزين والإدارة.',
-            details: [{
-                icon: '📍',
-                label: 'الموقع',
-                value: 'الرياض'
-            }, {
-                icon: '📏',
-                label: 'المساحة',
-                value: '20,000 م²'
-            }, {
-                icon: '📅',
-                label: 'سنة الإنجاز',
-                value: '2024'
-            }, {
-                icon: '⏱️',
-                label: 'مدة التنفيذ',
-                value: '16 شهر'
-            }]
-        }, {
-            title: 'برج المكاتب الإداري',
-            category: 'تجاري',
-            icon: '🏢',
-            bg: 'linear-gradient(135deg, #c9a84c, #1a5632)',
-            desc: 'بناء برج إداري من 10 طوابق يضم مكاتب حديثة ومرافق خدمية متكاملة مع أنظمة ذكية للتحكم في الإنارة والتكييف.',
-            details: [{
-                icon: '📍',
-                label: 'الموقع',
-                value: 'مكة المكرمة'
-            }, {
-                icon: '🏢',
-                label: 'الطوابق',
-                value: '10 طوابق'
-            }, {
-                icon: '📅',
-                label: 'سنة الإنجاز',
-                value: '2025'
-            }, {
-                icon: '⏱️',
-                label: 'مدة التنفيذ',
-                value: '30 شهر'
-            }]
-        }, {
-            title: 'فلل الريان الفاخرة',
-            category: 'سكني',
-            icon: '🏡',
-            bg: 'linear-gradient(135deg, #2d2d44, #1a5632)',
-            desc: 'تصميم وبناء 12 فيلا فاخرة بتشطيبات عالية الجودة ومسابح خاصة وحدائق منسقة مع أنظمة أمان متقدمة.',
-            details: [{
-                icon: '📍',
-                label: 'الموقع',
-                value: 'مكة المكرمة'
-            }, {
-                icon: '🏡',
-                label: 'الوحدات',
-                value: '12 فيلا'
-            }, {
-                icon: '📅',
-                label: 'سنة الإنجاز',
-                value: '2024'
-            }, {
-                icon: '⏱️',
-                label: 'مدة التنفيذ',
-                value: '22 شهر'
-            }]
-        }, {
-            title: 'شبكة الصرف الصحي',
-            category: 'بنية تحتية',
-            icon: '🔧',
-            bg: 'linear-gradient(135deg, #1a5632, #c9a84c)',
-            desc: 'تنفيذ شبكة صرف صحي متكاملة لحي سكني جديد بطول 8 كيلومتر تشمل محطات ضخ وأنابيب رئيسية وفرعية.',
-            details: [{
-                icon: '📍',
-                label: 'الموقع',
-                value: 'الطائف'
-            }, {
-                icon: '📏',
-                label: 'الطول',
-                value: '8 كم'
-            }, {
-                icon: '📅',
-                label: 'سنة الإنجاز',
-                value: '2023'
-            }, {
-                icon: '⏱️',
-                label: 'مدة التنفيذ',
-                value: '12 شهر'
-            }]
-        }, {
-            title: 'مدرسة النور النموذجية',
-            category: 'حكومي',
-            icon: '🎓',
-            bg: 'linear-gradient(135deg, #0e3d22, #1a1a2e)',
-            desc: 'بناء مدرسة نموذجية تتسع لـ 800 طالب تضم فصول دراسية حديثة ومختبرات علمية وملاعب رياضية وقاعة متعددة الأغراض.',
-            details: [{
-                icon: '📍',
-                label: 'الموقع',
-                value: 'مكة المكرمة'
-            }, {
-                icon: '👥',
-                label: 'السعة',
-                value: '800 طالب'
-            }, {
-                icon: '📅',
-                label: 'سنة الإنجاز',
-                value: '2024'
-            }, {
-                icon: '⏱️',
-                label: 'مدة التنفيذ',
-                value: '15 شهر'
-            }]
-        }];
+            <script>
+                // Project data
+                const projects = [{
+                    title: 'متجر سين ستور التجاري',
+                    category: 'تيكنلوجي',
+                    icon: '',
+                    bg: "linear-gradient(rgba(26, 86, 50, 0.35), rgba(14, 61, 34, 0.35)), url('سين%20ستور%20.png') center/cover no-repeat",
+                    desc: 'إنشاء موقع إلكتروني لبيع المنتجات المتعلقة بالنساء والإكسسوارات مع واجهة إدارة للمنتجات والطلبات.',
+                    details: [{
+                        icon: '📍',
+                        label: 'الموقع',
+                        value: 'أونلاين - المملكة العربية السعودية'
+                    }, {
+                        icon: '⏱️',
+                        label: 'مدة التنفيذ',
+                        value: 'إسبوعين'
+                    }]
+                }, {
+                    title: 'عمارة سكنية في الكعكية',
+                    category: 'عقاري',
+                    icon: '',
+                    bg: "linear-gradient(rgba(45, 134, 89, 0.35), rgba(26, 86, 50, 0.35)), url('عمارة%20الكعكية.jpeg') center/cover no-repeat",
+                    desc: 'عمارة سكنية مخصصة للعوائل فقط.',
+                    details: [{
+                        icon: '📍',
+                        label: 'الموقع',
+                        value: 'مكة المكرمة - الكعكية'
+                    }, {
+                        icon: '🏠',
+                        label: 'الشقق',
+                        value: '16 شقة'
+                    }, {
+                        icon: '⏱️',
+                        label: 'مدة التنفيذ',
+                        value: 'ساري'
+                    }]
+                }, {
+                    title: 'فندق الغزة',
+                    category: 'عقاري',
+                    icon: '',
+                    bg: "linear-gradient(rgba(26, 86, 50, 0.3), rgba(201, 168, 76, 0.35)), url('فندق%20الغزة.jpeg') center/cover no-repeat",
+                    desc: 'تشغيل وإدارة منشأة فندقية بخدمات ضيافة متكاملة في مكة المكرمة.',
+                    details: [{
+                        icon: '📍',
+                        label: 'الموقع',
+                        value: 'مكة المكرمة'
+                    }, {
+                        icon: '🏨',
+                        label: 'نوع المشروع',
+                        value: 'فندقي'
+                    }]
+                }, {
+                    title: 'عمارة ريع ذاخر',
+                    category: 'عقاري',
+                    icon: '',
+                    bg: "linear-gradient(rgba(45, 134, 89, 0.3), rgba(26, 86, 50, 0.35)), url('عمارة%20ريع%20ذاخر.jpeg') center/cover no-repeat",
+                    desc: 'إدارة وتشغيل عمارة سكنية في حي ريع ذاخر بمكة المكرمة.',
+                    details: [{
+                        icon: '📍',
+                        label: 'الموقع',
+                        value: 'مكة المكرمة - ريع ذاخر'
+                    }, {
+                        icon: '🏢',
+                        label: 'نوع المشروع',
+                        value: 'عمارة سكنية'
+                    }]
+                }, {
+                    title: 'شبكة مجاري السيول - الطائف',
+                    category: 'بنية تحتية',
+                    icon: '',
+                    bg: "linear-gradient(rgba(201, 168, 76, 0.35), rgba(138, 115, 48, 0.35)), url('مجاري%20السيول%20في%20الطائف%20.png') center/cover no-repeat",
+                    desc: 'تنفيذ شبكة مجاري سيول مع أعمال الحماية والتصريف لخدمة المناطق السكنية.',
+                    details: [{
+                        icon: '📍',
+                        label: 'الموقع',
+                        value: 'الطائف'
+                    }, {
+                        icon: '🛠️',
+                        label: 'نوع الأعمال',
+                        value: 'مجاري سيول وتصريف'
+                    }]
+                }, {
+                    title: 'شبكة مجاري السيول - بيشة',
+                    category: 'بنية تحتية',
+                    icon: '',
+                    bg: "linear-gradient(rgba(26, 86, 50, 0.35), rgba(201, 168, 76, 0.35)), url('شبكة%20مجاري%20سيول%20بيشة%20.png') center/cover no-repeat",
+                    desc: 'تنفيذ قناة مجاري سيول في بيشة لتحسين تصريف المياه وتقليل مخاطر تجمعات الأمطار.',
+                    details: [{
+                        icon: '📍',
+                        label: 'الموقع',
+                        value: 'بيشة'
+                    }, {
+                        icon: '🛠️',
+                        label: 'نوع الأعمال',
+                        value: 'قناة حماية ومجاري سيول'
+                    }]
+                }];
 
-        // Filter
-        function filterProjects(category) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            event.target.classList.add('active');
+                // Filter
+                function filterProjects(category) {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    event.target.classList.add('active');
 
-            const cards = document.querySelectorAll('.project-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 50);
-                } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 400);
+                    const cards = document.querySelectorAll('.project-card');
+                    cards.forEach(card => {
+                        if (category === 'all' || card.dataset.category === category) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 400);
+                        }
+                    });
                 }
-            });
-        }
 
-        // Modal
-        function openModal(index) {
-            const p = projects[index];
-            const overlay = document.getElementById('modalOverlay');
-            document.getElementById('modalHeader').style.background = p.bg;
-            document.getElementById('modalIcon').textContent = p.icon;
-            document.getElementById('modalCategory').textContent = p.category;
-            document.getElementById('modalTitle').textContent = p.title;
-            document.getElementById('modalDesc').textContent = p.desc;
+                // Modal
+                function openModal(index) {
+                    const p = projects[index];
+                    const overlay = document.getElementById('modalOverlay');
+                    document.getElementById('modalHeader').style.background = p.bg;
+                    document.getElementById('modalIcon').textContent = p.icon;
+                    document.getElementById('modalCategory').textContent = p.category;
+                    document.getElementById('modalTitle').textContent = p.title;
+                    document.getElementById('modalDesc').textContent = p.desc;
 
-            let detailsHTML = '';
-            p.details.forEach(d => {
-                detailsHTML += `
+                    let detailsHTML = '';
+                    p.details.forEach(d => {
+                        detailsHTML += `
                     <div class="modal-detail">
                         <div class="md-icon">${d.icon}</div>
                         <div class="md-text">
@@ -1471,129 +1335,129 @@
                         </div>
                     </div>
                 `;
-            });
-            document.getElementById('modalDetails').innerHTML = detailsHTML;
-
-            overlay.style.display = 'flex';
-            setTimeout(() => overlay.classList.add('active'), 10);
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal(e) {
-            if (e.target === e.currentTarget) closeModalDirect();
-        }
-
-        function closeModalDirect() {
-            const overlay = document.getElementById('modalOverlay');
-            overlay.classList.remove('active');
-            setTimeout(() => {
-                overlay.style.display = 'none';
-            }, 400);
-            document.body.style.overflow = '';
-        }
-
-        // Menu
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            const navOverlay = document.getElementById('navOverlay');
-            if (!navLinks || !navOverlay) return;
-
-            navLinks.classList.toggle('active');
-            navOverlay.classList.toggle('active');
-            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileToggle = document.getElementById('mobileToggle');
-            const navLinks = document.getElementById('navLinks');
-            const navOverlay = document.getElementById('navOverlay');
-            if (!mobileToggle || !navLinks || !navOverlay) return;
-
-            mobileToggle.addEventListener('click', (event) => {
-                event.stopPropagation();
-                toggleMenu();
-            });
-
-            navOverlay.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                navOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    navOverlay.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768) {
-                    navLinks.classList.remove('active');
-                    navOverlay.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-        });
-
-        // Scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            const scrollTop = document.getElementById('scrollTop');
-            if (window.scrollY > 50) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
-            if (window.scrollY > 500) scrollTop.classList.add('visible');
-            else scrollTop.classList.remove('visible');
-        });
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-        document.querySelectorAll('.fade-up, .scale-in').forEach(el => observer.observe(el));
-
-        // Counter
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    document.querySelectorAll('.counter').forEach(c => {
-                        const target = parseInt(c.dataset.target);
-                        let current = 0;
-                        const step = target / 80;
-                        const interval = setInterval(() => {
-                            current += step;
-                            if (current >= target) {
-                                c.textContent = target;
-                                clearInterval(interval);
-                            } else c.textContent = Math.floor(current);
-                        }, 25);
                     });
-                    counterObserver.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.3
-        });
-        document.querySelector('.stats-bar') && counterObserver.observe(document.querySelector('.stats-bar'));
+                    document.getElementById('modalDetails').innerHTML = detailsHTML;
 
-        // ESC to close modal
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') closeModalDirect();
-        });
-    </script>
+                    overlay.style.display = 'flex';
+                    setTimeout(() => overlay.classList.add('active'), 10);
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeModal(e) {
+                    if (e.target === e.currentTarget) closeModalDirect();
+                }
+
+                function closeModalDirect() {
+                    const overlay = document.getElementById('modalOverlay');
+                    overlay.classList.remove('active');
+                    setTimeout(() => {
+                        overlay.style.display = 'none';
+                    }, 400);
+                    document.body.style.overflow = '';
+                }
+
+                // Menu
+                function toggleMenu() {
+                    const navLinks = document.getElementById('navLinks');
+                    const navOverlay = document.getElementById('navOverlay');
+                    if (!navLinks || !navOverlay) return;
+
+                    navLinks.classList.toggle('active');
+                    navOverlay.classList.toggle('active');
+                    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+                }
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    const mobileToggle = document.getElementById('mobileToggle');
+                    const navLinks = document.getElementById('navLinks');
+                    const navOverlay = document.getElementById('navOverlay');
+                    if (!mobileToggle || !navLinks || !navOverlay) return;
+
+                    mobileToggle.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        toggleMenu();
+                    });
+
+                    navOverlay.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        navOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+
+                    navLinks.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            navLinks.classList.remove('active');
+                            navOverlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                        });
+                    });
+
+                    window.addEventListener('resize', () => {
+                        if (window.innerWidth > 768) {
+                            navLinks.classList.remove('active');
+                            navOverlay.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+
+                // Scroll
+                window.addEventListener('scroll', () => {
+                    const navbar = document.getElementById('navbar');
+                    const scrollTop = document.getElementById('scrollTop');
+                    if (window.scrollY > 50) navbar.classList.add('scrolled');
+                    else navbar.classList.remove('scrolled');
+                    if (window.scrollY > 500) scrollTop.classList.add('visible');
+                    else scrollTop.classList.remove('visible');
+                });
+
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Observer
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) entry.target.classList.add('visible');
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+                document.querySelectorAll('.fade-up, .scale-in').forEach(el => observer.observe(el));
+
+                // Counter
+                const counterObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            document.querySelectorAll('.counter').forEach(c => {
+                                const target = parseInt(c.dataset.target);
+                                let current = 0;
+                                const step = target / 80;
+                                const interval = setInterval(() => {
+                                    current += step;
+                                    if (current >= target) {
+                                        c.textContent = target;
+                                        clearInterval(interval);
+                                    } else c.textContent = Math.floor(current);
+                                }, 25);
+                            });
+                            counterObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.3
+                });
+                document.querySelector('.stats-bar') && counterObserver.observe(document.querySelector('.stats-bar'));
+
+                // ESC to close modal
+                document.addEventListener('keydown', e => {
+                    if (e.key === 'Escape') closeModalDirect();
+                });
+            </script>
 </body>
 
 </html>
